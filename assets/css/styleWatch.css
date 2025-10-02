@@ -1,0 +1,222 @@
+
+/* ROOT STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+  --bg: #9d2e28;            /* warm red */
+  --pill: #f5d76e;          /* yellow pill */
+  --pill-hover: #ffe066;
+  --pill-shadow: rgba(0,0,0,0.25);
+  --text: #fff;
+  --muted: rgba(255,255,255,0.85);
+  --card-bg: rgba(255,255,255,0.03);
+  --radius: 28px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* BODY */
+body {
+  padding: 16px;
+
+}
+/* PAGE CONTAINER */
+.page-grid {
+    display: grid;
+    max-width: 400px;
+    margin: 0 auto;
+    min-height: 70vh;
+    background: rgba(143, 41, 34, 0.92);
+    color: var(--text);
+    border: 2px solid var(--pill);
+    grid-template-rows: 2fr 2fr 2fr;
+    justify-content: center;
+    align-items: center;
+    margin-top: 38px;
+}
+
+/* HEADER SECTION AREA */
+.clear-link {
+  display: grid;
+  justify-self: center;  
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 22px;
+  border: none;
+  color: #edf2f4;
+  background: none;
+  width: 130%;
+  cursor: pointer;
+  transition: 0.5;
+}
+
+.clear-link:hover, .clear-link:focus {
+  color: var(--pill-hover);
+  cursor: pointer;
+}
+
+/* MAIN SECTION AREA */
+.stopwatch-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  justify-items: center;
+}
+
+
+.timer-display {
+  font-size: 45px;
+  letter-spacing: 1px;
+  user-select: none;
+  font-family: "Saira", sans-serif;
+  font-weight: 600;
+  display: grid;
+  grid-auto-flow: column;
+  color: rgba(255,255,255,0.99);
+}
+
+/* milliseconds smaller */
+.ms {
+  font-size: 0.8em; /* relative to main time */
+  opacity: 0.9;
+  align-self: end;
+  
+}
+
+.big-button-wrap{
+  display: grid;
+  place-items: center;
+  margin: 10px 0;
+  margin-bottom: 20px;
+}
+
+.big-btn {
+  height: 150%;
+  border-radius: 55%;
+  border: none;
+  background: var(--pill);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-transform: lowercase;
+  padding: 15px;
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+/* MAIN SECTION AREA - SMALL BUTTONS */
+.controls-grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  
+}
+
+.sm-btn {
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: none;
+  justify-items: center;
+  cursor: pointer;
+  background: rgba(255,255,255,0.12);
+  color: var(--text);
+  font-weight: 600;
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+.lap-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+  width: 80%;
+  font-size: 16px;
+  color: var(--muted);
+  max-height: 200px;
+  text-align: center;
+}
+
+.lap-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+.controls-grid button:nth-child(1) {
+  background-color: #1a936f;
+}
+.controls-grid button:nth-child(2) {
+  background-color: red;
+}
+.controls-grid button:nth-child(3) {
+  background-color: #114b5f;
+}
+.controls-grid button:nth-child(4) {
+  background-color: #01baef;
+}
+
+
+/* FOOTER AREA - LINK BUTTON */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+footer small {
+  padding: 5px 0;
+}
+.link-btn {
+    display: grid;
+    justify-self: center;
+    text-decoration: none;
+    background: #ee94cd;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* HOVER/ACTIVE EFFECTS */
+.big-btn:hover, .link-btn:hover {
+    background-color: #f7ede2;
+    color: #333;
+}
+
+.sm-btn:hover {
+    /* background-color: #d4995b; */
+  background-color: #ffe066;
+  color: var(--text);
+}
+
+.sm-btn:active, .big-btn:active {
+  transform: translateY(-2px);
+}
+
+
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  body {
+    padding: 28px;
+  }
+  .page-grid {
+    height: 60dvh;
+    max-width: 1000px;
+    margin-top: 40px;
+  }
+  .footer {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 15px;
+  }
+}
+

@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    background: #9d2e28;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-size: 16px;
+    line-height: 1.45;
+    padding: 16px;
+}
+
+/* CONTAINER CORNER */
+.container {
+    max-width: 400px;
+    min-height: 70vh;
+    display: grid;
+    grid-template-rows: 100px auto auto;
+    place-items: center;
+    margin: 0 auto;
+    justify-self: center;
+}
+
+/* HEADER CORNER */
+.header {
+    display: grid;
+    place-items: center;
+    padding: 8px 4px;
+}
+
+.header h1 {
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+/* MAIN CORNER */
+.main {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 12px;
+    align-content: start;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    gap: 8px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 14px;
+    border-radius: 8px;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.06);
+    width: 100%;
+    overflow: visible;
+}
+
+.card h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.card p {
+    text-align: center;
+    margin: 0;
+    color: rgba(255,255,255,0.85)
+}
+
+.card ul {
+    margin: 0;
+    padding-left: 18px;
+    color: rgba(255,255,255,0.85);
+    list-style-type: disc;
+}
+
+.link-btn {
+    display: grid;
+    justify-self: center;
+    text-decoration: none;
+    background: #ee94cd;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    display: grid;
+    place-items: center;
+    padding: 8px 4px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+}
+
+/* FOCUS RING */
+.link-btn:focus, .link-btn:hover{
+    outline: 3px solid rgba(245,215,110,0.18);
+    color: #f7ede2;
+}
+
+/* MEDIA QUERY FOR DESKTOP */
+@media (min-width: 768px) {
+  body {
+    padding: 28px;
+  }
+  .container {
+    max-width: 800px;
+    gap: 17px;
+  }
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+  }
+  .card-wide {
+    grid-column: 1 / -1;
+  }
+  .card ul {
+    text-align: center;
+    margin-left: 0;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+  .card .task-list{
+    text-align: left;
+  }
+  .card h2, .header h1 {
+    font-size: 30px;
+  }
+  .card p, .card .intro, .card ul, .card li, .footer {
+    font-size: 15px; 
+  }
+  .footer {
+    margin-bottom: 20px;
+  }
+}

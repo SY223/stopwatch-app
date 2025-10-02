@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="assets/css/styleWatch.css" />
+    <script defer src="assets/js/app.js"></script>
+  </head>
+  <body>
+    <div class="page-grid">
+      <!-- Top area -->
+      <header class="header">
+        <button id="topClearBtn" class="clear-link" title="Reset timer">
+          CLEAR
+        </button>
+      </header>
+
+      <main>
+        <div class="stopwatch-card">
+          <!-- Timer display -->
+          <div id="display" class="timer-display card" aria-live="polite" role="timer">
+            <span id="hh">00</span>:<span id="mm">00</span>:<span id="ss"
+              >00</span
+            >
+            <span id="ms" class="ms">.000</span>
+          </div>
+
+          <!-- Big pill start/stop -->
+          <div class="big-button-wrap card">
+            <button id="bigToggle" class="big-btn" aria-pressed="false">
+              start/stop
+            </button>
+          </div>
+
+          <!-- Small controls (Start, Stop, Reset, Lap) -->
+          <div
+            class="controls-grid card"
+            role="group"
+            aria-label="Stopwatch controls"
+          >
+            <button id="startBtn" class="sm-btn">Start</button>
+            <button id="stopBtn" class="sm-btn">Stop</button>
+            <button id="resetBtn" class="sm-btn">Reset</button>
+            <button id="lapBtn" class="sm-btn">Lap</button>
+          </div>
+          <ul id="lapList" class="lap-list"></ul>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <a href="index.html" class="link-btn">← Back to Brief</a>
+        <small>Copyright © 2025 Myself (UI inspired)</small>
+      </footer>
+    </div>
+
+  </body>
+</html>
