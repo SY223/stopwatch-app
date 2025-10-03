@@ -25,7 +25,7 @@
 /* BODY */
 body {
   padding: 16px;
-  background-color: #fdebe1;
+  background-color: #9d2e28;
 
 }
 /* PAGE CONTAINER */
@@ -34,19 +34,20 @@ body {
     max-width: 400px;
     margin: 0 auto;
     min-height: 70vh;
-    background: rgba(143, 41, 34, 0.92);
     color: var(--text);
-    border: 2px solid var(--pill);
-    grid-template-rows: 2fr 2fr 2fr;
-    justify-content: center;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr;
+    justify-self: center;
     align-items: center;
-    margin-top: 38px;
+    margin-top: 80px;
 }
+
+
 
 /* HEADER SECTION AREA */
 .clear-link {
   display: grid;
-  justify-self: center;  
+  justify-self: center;
   letter-spacing: 1px;
   font-weight: 700;
   font-size: 22px;
@@ -58,9 +59,8 @@ body {
   transition: 0.5;
 }
 
-.clear-link:hover, .clear-link:focus {
+.clear-link:hover {
   color: var(--pill-hover);
-  cursor: pointer;
 }
 
 /* MAIN SECTION AREA */
@@ -99,17 +99,20 @@ body {
 }
 
 .big-btn {
-  height: 150%;
+  height: 120px;
+  width: 120px;
   border-radius: 55%;
   border: none;
   background: var(--pill);
-  color: #fff;
   font-weight: 700;
   font-size: 1.5rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-transform: lowercase;
   padding: 15px;
-  transition: transform 150ms ease, background 150ms ease;
+  transition: background 150ms ease;
 }
 
 /* MAIN SECTION AREA - SMALL BUTTONS */
