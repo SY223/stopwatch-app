@@ -47,14 +47,15 @@ body {
 /* HEADER SECTION AREA */
 .clear-link {
   display: grid;
-  justify-self: center;
+  place-items: center;
+  width: 100%;
   letter-spacing: 1px;
   font-weight: 700;
   font-size: 22px;
   border: none;
   color: #edf2f4;
   background: none;
-  width: 130%;
+
   cursor: pointer;
   transition: 0.5;
 }
