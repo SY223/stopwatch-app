@@ -16,6 +16,7 @@ const resetBtn = document.getElementById("resetBtn"); // resets the timer
 const lapBtn = document.getElementById("lapBtn"); // records lap time
 const lapList = document.getElementById('lapList');
 const bigToggle = document.getElementById("bigToggle"); // big start/stop button
+const bigReset = document.getElementById("bigReset"); // big start/stop button
 
 // Format numbers to two and three it digits
 function two(n) {
@@ -27,14 +28,12 @@ function three(n) {
 
 // Update the visual display
 function updateDisplay() {
-  display.textContent = `${two(hours)}:${two(minutes)}:${two(seconds)}:${three(
-    milliseconds
-  )}`;
+  display.textContent = `${two(hours)}:${two(minutes)}:${two(seconds)}`;
 }
 
 // Add a lap entry
 function recordLap() {
-  const lapTime = `${two(hours)}:${two(minutes)}:${two(seconds)}:${three(milliseconds)}`;
+  const lapTime = `${two(hours)}:${two(minutes)}:${two(seconds)}`;
   lapList.innerHTML = ''; // Clear previous lap
   const li = document.createElement("li");
   li.textContent = `Lap: ${lapTime}`;
@@ -62,7 +61,7 @@ function displayTimer() {
 // Start handler: prevent multiple timers by checking timerId
 function start() {
   if (timerId !== null) return; // already running
-  // Call tick immediately so display updates without 1s delay
+  // Call displayTimer immediately so display updates without 1s delay
   displayTimer();
   timerId = setInterval(displayTimer, 10);
 
@@ -105,14 +104,15 @@ function toggleTimer() {
   }
 }
 
-// Attach events
+// Attached events
 startBtn.addEventListener('click', start);
 stopBtn.addEventListener('click', stop);
 resetBtn.addEventListener('click', reset);
 topClearBtn.addEventListener('click', reset);
 bigToggle.addEventListener("click", toggleTimer);
 lapBtn.addEventListener('click', recordLap);
+bigReset.addEventListener('click', reset);
 
-// Initialize display
+// Initialized display
 updateDisplay();
 

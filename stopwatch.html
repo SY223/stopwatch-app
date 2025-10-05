@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopwatch</title>
     <link rel="stylesheet" href="assets/css/styleWatch.css" />
     <script defer src="assets/js/app.js"></script>
@@ -20,17 +20,20 @@
       <main>
         <div class="stopwatch-card">
           <!-- Timer display -->
-          <div id="display" class="timer-display" aria-live="polite" role="timer">
+          <div id="display" class="timer-display" aria-live="polite" aria-label="Timer display showing hours, minutes, and seconds" role="timer">
             <span id="hh">00</span>:<span id="mm">00</span>:<span id="ss"
               >00</span
             >
             <span id="ms" class="ms">.000</span>
           </div>
 
-          <!-- Big pill start/stop -->
+          <!-- Big start/stop -->
           <div class="big-button-wrap">
-            <button id="bigToggle" class="big-btn" aria-pressed="false">
+            <button id="bigToggle" class="big-btn big-start" aria-pressed="false">
               start/stop
+            </button>
+            <button id="bigReset" class="big-btn big-reset" aria-pressed="false">
+              reset
             </button>
           </div>
 
@@ -40,10 +43,10 @@
             role="group"
             aria-label="Stopwatch controls"
           >
-            <button id="startBtn" class="sm-btn">Start</button>
-            <button id="stopBtn" class="sm-btn">Stop</button>
-            <button id="resetBtn" class="sm-btn">Reset</button>
-            <button id="lapBtn" class="sm-btn">Lap</button>
+            <button id="startBtn" class="sm-btn sm-btn-start">Start</button>
+            <button id="stopBtn" class="sm-btn sm-btn-stop">Stop</button>
+            <button id="resetBtn" class="sm-btn sm-btn-reset">Reset</button>
+            <button id="lapBtn" class="sm-btn sm-btn-lap">Lap</button>
           </div>
           <ul id="lapList" class="lap-list"></ul>
         </div>
