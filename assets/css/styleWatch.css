@@ -28,6 +28,7 @@ body {
   background-color: #9d2e28;
 }
 
+
 /* PAGE CONTAINER */
 .page-grid {
   display: grid;
@@ -39,6 +40,30 @@ body {
   grid-template-columns: 1fr;
   justify-self: center;
   align-items: center;
+}
+
+/* NAVBAR SECTION */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  background: none;    
+  padding: 0.5rem 1rem;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-link {
+  color: #edf2f4;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+  font-size: 22px;
+  text-transform: capitalize;
+  transition: color 150ms ease;
+  line-height: 1;
 }
 
 /* HEADER SECTION AREA */
@@ -56,7 +81,7 @@ body {
   transition: background 150ms ease;;
 }
 
-.clear-link:hover {
+.clear-link:hover, .nav-link:hover {
   color: var(--pill-hover);
 }
 
